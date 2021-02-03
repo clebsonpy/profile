@@ -1,12 +1,15 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from 'next/head';
+import styled from 'styled-components';
+
+import styles from '../styles/Home.module.css';
+
+
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Projects</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Clebson Farias</title>
       </Head>
 
       <main className={styles.main}>
@@ -24,12 +27,11 @@ export default function Home() {
 
       <footer className={styles.footer}>
         <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          href="https://github.com/clebsonpy"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
+          Powered by Clebsonpy
         </a>
       </footer>
     </div>
