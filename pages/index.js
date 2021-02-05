@@ -4,10 +4,11 @@ import styled from 'styled-components';
 import styles from '../styles/Home.module.css';
 
 const CardContainer = styled.div`
-  width: 25rem;
+  width: 30rem;
+  height: 10rem;
   margin: 1rem;
   flex-basis: 45%;
-  padding: 1.5rem;
+  padding: 1rem;
   text-align: left;
   color: inherit;
   text-decoration: none;
@@ -37,6 +38,11 @@ const Title = styled.h1`
   margin: 0;
   line-height: 1.15;
   font-size: 4rem;
+  
+  a {
+    color: #0070f3;
+    text-decoration: none
+  }
 `;
 
 function Card({title, description, link}) {
@@ -59,9 +65,9 @@ export default function Home() {
 
             <main className={styles.main}>
                 <Title>
-                    Packages and Sites developed by <a href="https://github.com/clebsonpy" style={{color: "#0070f3", textDecoration: "none"}}>ClebsonPy</a>
+                    Packages and Sites developed by <a href="https://github.com/clebsonpy">ClebsonPy</a>
                 </Title>
-                <div style={{display: "flex"}}>
+                <div className={styles.grid}>
                     <Card title="HidroComp"
                           description="Package Python for hydrological data analysis"
                           link={"https://github.com/clebsonpy/hidrocomp"}
@@ -70,12 +76,11 @@ export default function Home() {
                           description="Repositório deste site."
                           link={"https://github.com/clebsonpy/profile"}
                     />
-                </div>
-
                     <Card title="HydroPythonApi"
                           description="Package Python for obtaining hydrological data from the Brazilian"
                           link={"https://github.com/clebsonpy/HydroPythonApi"}
                     />
+                </div>
 
 
             </main>
