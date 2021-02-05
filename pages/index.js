@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import styled from 'styled-components';
 
-import styles from '../styles/Home.module.css';
 
 const CardContainer = styled.div`
   width: 30rem;
@@ -37,6 +36,9 @@ const DescriptionCard = styled.p`
   margin: 0;
   font-size: 1.25rem;
   line-height: 1.5;
+  @media(max-width: 600px){
+    font-size: 1rem;
+  }
 `;
 
 const Title = styled.h1`
@@ -55,6 +57,58 @@ const Title = styled.h1`
   }
 `;
 
+const Footer = styled.footer`
+  width: 100%;
+  height: 100px;
+  border-top: 1px solid #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  img {
+    margin-left: 0.5rem;
+  }
+  
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+`;
+
+const Grid = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin-top: 3rem;
+  @media (max-width: 600px) {
+    width: 100%;
+    flex-direction: column;
+  }
+`;
+
+const Main = styled.main`
+  width:100%;
+  padding: 5rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Container = styled.div`
+  min-height: 100vh;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
 function Card({title, description, link}) {
     return (
         <CardContainer>
@@ -68,16 +122,16 @@ function Card({title, description, link}) {
 
 export default function Home() {
     return (
-        <div className={styles.container}>
+        <Container>
             <Head>
                 <title>Clebson Farias</title>
             </Head>
 
-            <main className={styles.main}>
+            <Main>
                 <Title>
                     Packages and Sites developed by <a href="https://github.com/clebsonpy">ClebsonPy</a>
                 </Title>
-                <div className={styles.grid}>
+                <Grid>
                     <Card title="HidroComp"
                           description="Package Python for hydrological data analysis"
                           link={"https://github.com/clebsonpy/hidrocomp"}
@@ -90,12 +144,9 @@ export default function Home() {
                           description="Package Python for obtaining hydrological data from the Brazilian"
                           link={"https://github.com/clebsonpy/HydroPythonApi"}
                     />
-                </div>
-
-
-            </main>
-
-            <footer className={styles.footer}>
+                </Grid>
+            </Main>
+            <Footer>
                 <a
                     href="https://github.com/clebsonpy"
                     target="_blank"
@@ -103,7 +154,8 @@ export default function Home() {
                 >
                     Powered by Clebsonpy
                 </a>
-            </footer>
-        </div>
+
+            </Footer>
+        </Container>
     )
 }
