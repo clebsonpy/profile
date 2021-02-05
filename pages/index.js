@@ -21,6 +21,11 @@ const CardContainer = styled.div`
     color: #0070f3;
     border-color: #0070f3;
   }
+  @media(max-width: 600px){
+    width: 20rem;
+    height: 10rem;
+    margin: 0.5rem;
+  }
 `;
 
 const TitleCard = styled.h3`
@@ -43,13 +48,18 @@ const Title = styled.h1`
     color: #0070f3;
     text-decoration: none
   }
+  @media(max-width: 600px) {
+    font-size: 3rem;
+    line-height: 1.15;
+    width: 100%;
+  }
 `;
 
 function Card({title, description, link}) {
     return (
         <CardContainer>
-            <a href={link}>
-                <TitleCard>{title} &rarr;</TitleCard>
+            <a href={link} target="_blank">
+                <TitleCard>{title}&rarr;</TitleCard>
                 <DescriptionCard>{description}</DescriptionCard>
             </a>
         </CardContainer>
