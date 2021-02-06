@@ -137,7 +137,7 @@ export default function Home() {
                           link={"https://github.com/clebsonpy/hidrocomp"}
                     />
                     <Card title="Profile"
-                          description="Repositório deste site."
+                          description="Repository of this website."
                           link={"https://github.com/clebsonpy/profile"}
                     />
                     <Card title="HydroPythonApi"
