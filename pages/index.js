@@ -105,7 +105,7 @@ export default function Home() {
                     alt="Picture of the author"
                 />
                 <Title>Clebson Carvalho de Farias</Title>
-                <Skill>Engenheiro de Dados e Desenvolvedor Backend | Django - FlowBr | CherryIT</Skill>
+                <Skill>Engenheiro de Dados e Desenvolvedor Backend | Django - FlowBr</Skill>
                 <Description>Engenheiro Ambiental e Sanitarista (2018) e mestrando em Recursos Hídricos e Saneamento pela
                     Universidade Federal de Alagoas, graduando em Engenharia Civil pela Faculdade de Tecnologia de
                     Alagoas. Programador em Python com experiência em ferramentas de manipulação e visualização de 
